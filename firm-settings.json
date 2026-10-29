@@ -1,0 +1,30 @@
+{
+  "firmName": "Example Audit Firm (local development)",
+  "aiEnabled": true,
+  "ai": {
+    "foundryResource": "",
+    "deployment": "claude-opus-5-5",
+    "model": "claude-opus-5-5",
+    "promptVersion": "x-2026.10.1",
+    "effort": "medium",
+    "sendPageImages": "scanned",
+    "scope": "https://ai.azure.com/.default"
+  },
+  "ocr": {
+    "model": "prebuilt-layout",
+    "apiVersion": "2024-11-30",
+    "scope": "https://cognitiveservices.azure.com/.default"
+  },
+  "entra": {
+    "clientId": "00000000-0000-0000-0000-000000000000",
+    "tenantId": "organizations"
+  },
+  "lowConfidenceThreshold": 0.8,
+  "redaction": {
+    "enabled": false,
+    "terms": []
+  },
+  "aiPolicy": "vouchAssistant uses AI only to support document review. It reads supporting documents on this laptop and proposes extracted values, each linked to the place on the document it was read from. Documents are not stored by vouchAssistant.\n\nBy using vouchAssistant you confirm that:\n1. You will examine every transaction and every attached document yourself before signing off.\n2. You remain responsible for every sign-off, exception and conclusion. The tool never signs off or concludes on an assertion.\n3. Extracted values are not evidence. The source document is the evidence; values marked \"Verify manually\" or flagged must be checked by eye.\n4. Red flags are prompts for professional scepticism, not conclusions about fraud.\n5. You will select only documents relevant to the engagement, in line with the firm's confidentiality policies.",
+  "aiPolicyVersion": 1,
+  "licence": "eyJmb3JtYXQiOiJ2b3VjaEFzc2lzdGFudC5saWNlbmNlIiwidmVyc2lvbiI6MSwibGljZW5jZUlkIjoiREVWLTAwMDEiLCJmaXJtTmFtZSI6IkV4YW1wbGUgQXVkaXQgRmlybSAobG9jYWwgZGV2ZWxvcG1lbnQpIiwiZG9tYWlucyI6WyJmaXJtLnRlc3QiXSwic2VhdHMiOjUsImRvY3VtZW50c1BlclVzZXJQZXJNb250aCI6NTAwLCJ2YWxpZEZyb20iOiIyMDI2LTAxLTAxIiwidmFsaWRVbnRpbCI6IjIwMjctMTItMzEiLCJpc3N1ZWRBdCI6IjIwMjYtMTAtMjRUMjE6MTc6NTMuMjYxWiJ9.nupxEHV2u6hM_Qges92ZVynT1eZ1Fxf5UF8T_5QhgxS_Eesz4vUZe7x3Xfz9Og8ytbrHJD_ptFrfzHmIBgHCBA"
+}
