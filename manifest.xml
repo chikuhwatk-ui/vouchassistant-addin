@@ -6,7 +6,7 @@
            xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
            xsi:type="TaskPaneApp">
   <Id>cac13345-408b-40e7-9f31-b0e0f17fb1d4</Id>
-  <Version>1.1.0.0</Version>
+  <Version>1.1.1.0</Version>
   <ProviderName>vouchAssistant</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="vouchAssistant"/>
@@ -109,7 +109,7 @@
         <bt:String id="vA.Tab.Label" DefaultValue="vouchAssistant"/>
         <bt:String id="vA.Group.Label" DefaultValue="vouchAssistant"/>
         <bt:String id="vA.Vouching.Label" DefaultValue="Vouching"/>
-        <bt:String id="vA.TieIns.Label" DefaultValue="Tie-ins"/>
+        <bt:String id="vA.TieIns.Label" DefaultValue="Tie‑ins"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="GetStarted.Description" DefaultValue="Open the vouchAssistant tab: Vouching for a sample, Tie-ins for the financial statements."/>
