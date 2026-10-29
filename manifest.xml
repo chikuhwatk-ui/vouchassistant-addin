@@ -6,7 +6,7 @@
            xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
            xsi:type="TaskPaneApp">
   <Id>cac13345-408b-40e7-9f31-b0e0f17fb1d4</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.1.0.0</Version>
   <ProviderName>vouchAssistant</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="vouchAssistant"/>
@@ -43,7 +43,7 @@
           </GetStarted>
           <FunctionFile resid="Taskpane.Url"/>
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
-            <OfficeTab id="TabHome">
+            <CustomTab id="vA.Tab">
             <Group id="vA.Group">
               <Label resid="vA.Group.Label"/>
               <Icon>
@@ -51,24 +51,39 @@
                 <bt:Image size="32" resid="Icon.vouch.32"/>
                 <bt:Image size="80" resid="Icon.vouch.80"/>
               </Icon>
-              <Control xsi:type="Button" id="vA.Open">
-                <Label resid="vA.Open.Label"/>
+              <Control xsi:type="Button" id="vA.Vouching">
+                <Label resid="vA.Vouching.Label"/>
                 <Supertip>
-                  <Title resid="vA.Open.Label"/>
-                  <Description resid="vA.Open.Tip"/>
+                  <Title resid="vA.Vouching.Label"/>
+                  <Description resid="vA.Vouching.Tip"/>
                 </Supertip>
                 <Icon>
                   <bt:Image size="16" resid="Icon.vouch.16"/>
                   <bt:Image size="32" resid="Icon.vouch.32"/>
                   <bt:Image size="80" resid="Icon.vouch.80"/>
                 </Icon>
-                <Action xsi:type="ShowTaskpane">
-                  <TaskpaneId>vA.Pane</TaskpaneId>
-                  <SourceLocation resid="Taskpane.Url"/>
+                <Action xsi:type="ExecuteFunction">
+                  <FunctionName>openVouching</FunctionName>
+                </Action>
+              </Control>
+              <Control xsi:type="Button" id="vA.TieIns">
+                <Label resid="vA.TieIns.Label"/>
+                <Supertip>
+                  <Title resid="vA.TieIns.Label"/>
+                  <Description resid="vA.TieIns.Tip"/>
+                </Supertip>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.tieins.16"/>
+                  <bt:Image size="32" resid="Icon.tieins.32"/>
+                  <bt:Image size="80" resid="Icon.tieins.80"/>
+                </Icon>
+                <Action xsi:type="ExecuteFunction">
+                  <FunctionName>openTieIns</FunctionName>
                 </Action>
               </Control>
             </Group>
-            </OfficeTab>
+              <Label resid="vA.Tab.Label"/>
+            </CustomTab>
           </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
@@ -81,6 +96,9 @@
         <bt:Image id="Icon.vouch.16" DefaultValue="https://chikuhwatk-ui.github.io/vouchassistant-addin/assets/vouch-16.png"/>
         <bt:Image id="Icon.vouch.32" DefaultValue="https://chikuhwatk-ui.github.io/vouchassistant-addin/assets/vouch-32.png"/>
         <bt:Image id="Icon.vouch.80" DefaultValue="https://chikuhwatk-ui.github.io/vouchassistant-addin/assets/vouch-80.png"/>
+        <bt:Image id="Icon.tieins.16" DefaultValue="https://chikuhwatk-ui.github.io/vouchassistant-addin/assets/tieins-16.png"/>
+        <bt:Image id="Icon.tieins.32" DefaultValue="https://chikuhwatk-ui.github.io/vouchassistant-addin/assets/tieins-32.png"/>
+        <bt:Image id="Icon.tieins.80" DefaultValue="https://chikuhwatk-ui.github.io/vouchassistant-addin/assets/tieins-80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="Taskpane.Url" DefaultValue="https://chikuhwatk-ui.github.io/vouchassistant-addin/taskpane.html"/>
@@ -88,12 +106,15 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="vouchAssistant is ready"/>
+        <bt:String id="vA.Tab.Label" DefaultValue="vouchAssistant"/>
         <bt:String id="vA.Group.Label" DefaultValue="vouchAssistant"/>
-        <bt:String id="vA.Open.Label" DefaultValue="vouchAssistant"/>
+        <bt:String id="vA.Vouching.Label" DefaultValue="Vouching"/>
+        <bt:String id="vA.TieIns.Label" DefaultValue="Tie-ins"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Select the sheet with your sample, then click vouchAssistant on the Home tab."/>
-        <bt:String id="vA.Open.Tip" DefaultValue="Open vouchAssistant beside the sheet: vouch the sample against documents on this laptop, or tie the financial statements to the trial balance."/>
+        <bt:String id="GetStarted.Description" DefaultValue="Open the vouchAssistant tab: Vouching for a sample, Tie-ins for the financial statements."/>
+        <bt:String id="vA.Vouching.Tip" DefaultValue="Vouch the sample against supporting documents kept on this laptop, beside the sheet."/>
+        <bt:String id="vA.TieIns.Tip" DefaultValue="Tie the financial statements to the trial balance, line by line."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
